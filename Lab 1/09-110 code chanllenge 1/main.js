@@ -41,6 +41,8 @@ const Game = {
 //1
 const [players1,players2] = Game.players;
 console.log(players1, players2);
+// const{players} = Game;
+// console.log(players);
 //2
 const [gk1, ...fieldPlayers1] = players1;
 const [gk2, ...fieldPlayers2] = players2;
@@ -54,5 +56,19 @@ console.log(playersFinal1);
 // 5
 const {odds: { team1 , x:draw , team2}} = Game;
 console.log(draw);
+//6
+
+const {scored} = Game;
+
+function printGoats(...arr) {
+    console.log(arr);
+    console.log(arr.length);
+}
+printGoats(...scored);
+
+//7
+team1 < team2 && console.log("team 1 có tỉ lệ thắng cao hơn");
+team1 < team2 && console.log("team 2 có tỉ lệ thắng cao hơn");
+
 
 
