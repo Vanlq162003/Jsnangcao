@@ -26,32 +26,22 @@ const restaurant = {
     }
 };
 
-// truyền obj vào obj 
-restaurant.oderDelivery({
-  time: '10:00',
-  address: 'ha noi',
-  mainIndex: 0,
-  starterIndex: 1
-})
-// lấy thuốc tính từ 1 mảng
-const {location1} = restaurant;
-console.log(location1);
+//Thêm 1 mảng vào 1 mảng 
+const arr = [6,2,3,4,5,6,7];
+// const Narr = [10, 9 ,...arr];
+// console.log(Narr);
+// const newMenu = [...restaurant.mainMenu , 'Mì tôm'];
+// console.log(newMenu);
 
-// thay tên thuộc tính
-const{name:nameRes , openingHours:hours,categories:tags} = restaurant;
-console.log(nameRes,hours,tags);
+// truyền tất cả tham số vào trong hàm
 
-// Đặt giá trị mặc định nú nó k tồn tại
-const {menu=[],starterMenu=[]} = restaurant;
-console.log(menu,starterMenu);
-
-// thay đổi giá trị biến
-let a  = 100;
-let b  = 50;
-const obj = {a:20 , b:10, c:50};
-({a,b} = obj);
-console.log(a,b);
-
-// obj lồlồng obj
-const {fri:{open:o,close:c}}= restaurant.openingHours;
-console.log(o,c);
+function sumAll(...numbers){
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++){
+        // console.log(numbers[i]);
+        sum += numbers[i];
+    } 
+    return sum;
+}
+sumAll(4 ,9, 9);
+console.log(sumAll( 1 , 2));
