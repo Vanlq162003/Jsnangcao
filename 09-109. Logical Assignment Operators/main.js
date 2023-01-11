@@ -29,6 +29,14 @@ const restaurant = {
         console.log(otherIngredients);
       },
 };
+// Đặt thuộc tính mặc định cho obj ko có thuộc tínhd đây
+const person={
+    name  :'van',
+    lastName : 'Le',
+    // age : 0
+    
+}
+person.age ??= 19;
+ // sử dung  ?? nếu muốn lấy 0
+console.log(person);
 
-// toán tử ?? (bỏ qua th có giá trị null hoặc undefined)
-console.log(0 ?? 2);
